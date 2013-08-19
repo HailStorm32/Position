@@ -1,16 +1,62 @@
 
+
 task main()
 {
 
-float Y
+	float Y
 
-float X
+	float X
 
-float degrees
+	float degrees == 30
 
-float movement
+	float movement
 
-float
+	float distance
+
+	float sin_cos
+
+	nMotorEncoder[motorB] == 0
+
+	if(movement == 2)
+
+	{
+
+		while(movement == 2)
+
+		{
+
+			distance == nMotorEncoder[motorB];
+
+
+		}
+
+ }
+
+
+ else if(movement == 1)
+
+{
+
+sin_cos == sin(degrees);
+
+X == sin_cos * distance;
+
+sin_cos == 0;
+
+sin_cos == cos(degrees);
+
+Y == sin_cos * distance;
+
+
+
+
+
+}
+
+
+
+
+
 
 
 
