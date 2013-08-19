@@ -1,65 +1,57 @@
 
 
-task main()
+float position(float distance, float degrees, float movement)
 {
 
 	float Y
 
 	float X
 
-	float degrees == 30
-
-	float movement
-
-	float distance
-
 	float sin_cos
 
-	nMotorEncoder[motorB] == 0
-
-	if(movement == 2)
+	while(1==1)
 
 	{
 
-		while(movement == 2)
+		nMotorEncoder[motorB] == 0
+
+		if(movement == 2)
 
 		{
 
-			distance == nMotorEncoder[motorB];
+			while(movement == 2)
+
+			{
+
+				distance == nMotorEncoder[motorB];
+
+
+			}
+
+		}
+
+
+		else if(movement == 1)
+
+		{
+
+			sin_cos == sin(degrees);
+
+			X == sin_cos * distance;
+
+			sin_cos == 0;
+
+			sin_cos == cos(degrees);
+
+			Y == sin_cos * distance;
+
 
 
 		}
 
- }
 
 
- else if(movement == 1)
-
-{
-
-sin_cos == sin(degrees);
-
-X == sin_cos * distance;
-
-sin_cos == 0;
-
-sin_cos == cos(degrees);
-
-Y == sin_cos * distance;
+		return
 
 
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-}
+		}
