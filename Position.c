@@ -1,19 +1,20 @@
 
 
-float position(float distance, float degrees, float movement)
+int position(float distance, float degrees, float movement)
+
 {
 
-	float Y
+	float Y;
 
-	float X
+	float X;
 
-	float sin_cos
+	float sin_cos;
 
 	while(1==1)
 
 	{
 
-		nMotorEncoder[motorB] == 0
+		nMotorEncoder[motorB] = 0;
 
 		if(movement == 2)
 
@@ -23,7 +24,7 @@ float position(float distance, float degrees, float movement)
 
 			{
 
-				distance == nMotorEncoder[motorB];
+				distance = nMotorEncoder[motorB];
 
 
 			}
@@ -35,15 +36,15 @@ float position(float distance, float degrees, float movement)
 
 		{
 
-			sin_cos == sin(degrees);
+			sin_cos = sin(degrees);
 
-			X == sin_cos * distance;
+			X = sin_cos * distance;
 
-			sin_cos == 0;
+			sin_cos = 0;
 
-			sin_cos == cos(degrees);
+			sin_cos = cos(degrees);
 
-			Y == sin_cos * distance;
+			Y = sin_cos * distance;
 
 
 
@@ -51,7 +52,9 @@ float position(float distance, float degrees, float movement)
 
 
 
-		return
 
 
-		}
+
+	}
+
+}
