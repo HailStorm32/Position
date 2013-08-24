@@ -10,21 +10,21 @@ float position(float distance, float degrees, float movement)
 
 	float sin_cos;
 
-	while(1==1)
+	while(1==1) // repeat forever
 
 	{
 
 		nMotorEncoder[motorB] = 0;
 
-		if(movement == 2)
+		if(movement == 2)  // if robot is moving
 
 		{
 
-			while(movement == 2)
+			while(movement == 2) // while robot is moving
 
 			{
 
-				distance = nMotorEncoder[motorB];
+				distance = nMotorEncoder[motorB];  // puts degrees from motor B in distance
 
 
 			}
@@ -32,19 +32,19 @@ float position(float distance, float degrees, float movement)
 		}
 
 
-		else if(movement == 1)
+		else if(movement == 1)   // if robot is stopped
 
 		{
 
-			sin_cos = sin(degrees);
+			sin_cos = sin(degrees);       //  get the sin of from the numbers of degrees turned
 
-			X = sin_cos * distance;
+			X = sin_cos * distance;      // multiply the sin by the number of distance travled and put it in the X variable
 
-			sin_cos = 0;
+			sin_cos = 0;                // set the sin_cos variable to zero
 
-			sin_cos = cos(degrees);
+			sin_cos = cos(degrees);    // get the cos of from the numbers of degrees turned
 
-			Y = sin_cos * distance;
+			Y = sin_cos * distance;   //  multiply the cos by the number of distance travled and put it in the Y variable
 
 
 
