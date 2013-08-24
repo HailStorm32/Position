@@ -1,8 +1,10 @@
 
 
-float Get_Position(float distance, float degrees, float movement)
+float Get_Position(float degrees, float movement)
 
 {
+
+	float distance
 
 	float Y;
 
@@ -10,10 +12,24 @@ float Get_Position(float distance, float degrees, float movement)
 
 	float sin_cos;
 
+	int motor_A;
+
+	int motor_B;
+
+	int holder;
+
 	while(1==1) // repeat forever
 
 	{
 
+
+		// zero out all the variables
+
+		holder = 0;
+
+		motor_A = 0;
+
+		motor_B = 0;
 
 		Y = 0;
 
@@ -32,7 +48,15 @@ float Get_Position(float distance, float degrees, float movement)
 
 			{
 
-				distance = nMotorEncoder[motorB];  // puts degrees from motor B in distance
+				// this will take the average of motors A & B and put it in variable distance
+
+				motor_B = nMotorEncoder[motorB];  // puts degrees from motor B into variable motor_B
+
+				motor_A = nMotorEncoder[motorA];  // puts degrees from motor A into variable motor_A
+
+				holder = motor_A + motor_B;      // add values from motor_A and motor_B then put it in variable holder
+
+				distance = holder / 2;          // divide holder value by 2 then put it in variable distance
 
 
 			}
