@@ -1,14 +1,15 @@
+#include "Direction.h"
+
+float Y;
+
+float X;
 
 
-float Get_Position(float degrees, float movement)
+void Get_Position(float degrees, float movement)
 
 {
 
-	float distance
-
-	float Y;
-
-	float X;
+	float distance;
 
 	float sin_cos;
 
