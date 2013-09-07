@@ -9,6 +9,8 @@ void Get_Position(float degrees, float movement)
 
 {
 
+	int exit = 1;
+
 	float distance;
 
 	float sin_cos;
@@ -19,7 +21,7 @@ void Get_Position(float degrees, float movement)
 
 	int holder;
 
-	while(1==1) // repeat forever
+	while(exit == 1) // repeat untill exit != 1
 
 	{
 
@@ -82,6 +84,7 @@ void Get_Position(float degrees, float movement)
 
 			Y = sin_cos * distance;   //  multiply the cos by the number of distance travled and put it in the Y variable
 
+			exit = 3;
 
 
 		}
