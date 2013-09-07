@@ -41,6 +41,9 @@ void Get_Position(float degrees, float movement)
 
 		nMotorEncoder[motorB] = 0;
 
+		nMotorEncoder[motorC] = 0;
+
+
 		if(movement == 2)  // if robot is moving
 
 		{
@@ -53,9 +56,9 @@ void Get_Position(float degrees, float movement)
 
 				motor_B = nMotorEncoder[motorB];  // puts degrees from motor B into variable motor_B
 
-				motor_A = nMotorEncoder[motorA];  // puts degrees from motor A into variable motor_A
+				motor_C = nMotorEncoder[motorC];  // puts degrees from motor A into variable motor_A
 
-				holder = motor_A + motor_B;      // add values from motor_A and motor_B then put it in variable holder
+				holder = motor_C + motor_B;      // add values from motor_A and motor_B then put it in variable holder
 
 				distance = holder / 2;          // divide holder value by 2 then put it in variable distance
 
