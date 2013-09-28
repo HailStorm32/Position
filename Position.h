@@ -4,8 +4,7 @@ float Y;
 
 float X;
 
-
-void Get_Position(float degrees, float movement)
+void Get_Position()
 
 {
 
@@ -56,9 +55,9 @@ void Get_Position(float degrees, float movement)
 
 				// this will take the average of motors A & B and put it in variable distance
 
-				motor_B = nMotorEncoder[motorB];  // puts degrees from motor B into variable motor_B
+				motor_B = nMotorEncoder[motorB];  // puts currRate from motor B into variable motor_B
 
-				motor_C = nMotorEncoder[motorC];  // puts degrees from motor A into variable motor_A
+				motor_C = nMotorEncoder[motorC];  // puts currRate from motor A into variable motor_A
 
 				holder = motor_C + motor_B;      // add values from motor_A and motor_B then put it in variable holder
 
@@ -74,13 +73,13 @@ void Get_Position(float degrees, float movement)
 
 		{
 
-			sin_cos = sin(degrees);       //  get the sin from the numbers of degrees turned
+			sin_cos = sin(currentHeading);       //  get the sin from the numbers of currRate turned
 
 			X = sin_cos * distance;      // multiply the sin by the number of distance travled and put it in the X variable
 
 			sin_cos = 0;                // set the sin_cos variable to zero
 
-			sin_cos = cos(degrees);    // get the cos from the numbers of degrees turned
+			sin_cos = cos(currentHeading);    // get the cos from the numbers of currRate turned
 
 			Y = sin_cos * distance;   //  multiply the cos by the number of distance travled and put it in the Y variable
 
